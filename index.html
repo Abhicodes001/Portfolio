@@ -186,26 +186,23 @@
 
         <!-- Hero Photo Column -->
         <div class="hero-visual reveal-item" style="--delay: 0.5s">
-          <div class="profile-card-wrapper" id="profile-card">
-            <div class="profile-glow"></div>
-            <div class="profile-frame">
+          <div class="profile-portal-wrapper" id="profile-card">
+            <div class="portal-ambient-glow"></div>
+            <div class="portal-base-card"></div>
+            
+            <!-- Cutout image popping out from the card -->
+            <div class="profile-cutout-container">
               <img 
-                src="/profile.jpg" 
+                src="/profile-transparent.png" 
                 alt="Abhishek M Nair - AI/ML & Full-Stack Developer" 
-                class="profile-img" 
+                class="profile-cutout-img" 
                 loading="eager"
-                width="420"
-                height="420"
+                width="440"
+                height="440"
               />
-              <div class="profile-overlay-tag">
-                <span class="mono-tag">ENG // AI & FULL-STACK</span>
-              </div>
             </div>
-            <!-- Interactive badge corners -->
-            <div class="corner-cross tl"></div>
-            <div class="corner-cross tr"></div>
-            <div class="corner-cross bl"></div>
-            <div class="corner-cross br"></div>
+            
+            <div class="portal-bottom-fade"></div>
           </div>
         </div>
       </div>

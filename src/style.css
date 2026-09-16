@@ -723,98 +723,97 @@ button {
   align-items: center;
 }
 
-.profile-card-wrapper {
+/* ============================================================ */
+/* 3D PROFILE CUTOUT PORTAL EFFECT                              */
+/* ============================================================ */
+.profile-portal-wrapper {
   position: relative;
   width: 100%;
-  max-width: 360px;
-  aspect-ratio: 1 / 1;
+  max-width: 380px;
+  height: 440px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
-.profile-glow {
+/* Ambient dynamic back-glow */
+.portal-ambient-glow {
   position: absolute;
-  inset: -12px;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(99, 102, 241, 0.12) 50%, transparent 70%);
-  filter: blur(28px);
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.28) 0%, rgba(56, 189, 248, 0.15) 45%, transparent 70%);
+  filter: blur(36px);
   z-index: 0;
-  border-radius: var(--radius-lg);
-  animation: floatGlow 6s ease-in-out infinite alternate;
+  pointer-events: none;
+  animation: floatPortalGlow 5s ease-in-out infinite alternate;
 }
 
-@keyframes floatGlow {
-  0% { transform: scale(0.95); opacity: 0.6; }
-  100% { transform: scale(1.05); opacity: 0.9; }
+@keyframes floatPortalGlow {
+  0% { transform: translateX(-50%) scale(0.92); opacity: 0.6; }
+  100% { transform: translateX(-50%) scale(1.08); opacity: 0.95; }
 }
 
-.profile-frame {
+/* The card pedestal from which Abhishek emerges */
+.portal-base-card {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 330px;
+  background: linear-gradient(180deg, rgba(20, 22, 33, 0.85) 0%, rgba(10, 11, 17, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 28px;
+  z-index: 1;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.12);
+  transition: border-color var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.profile-portal-wrapper:hover .portal-base-card {
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(56, 189, 248, 0.15);
+}
+
+/* Cutout image popping out from the card */
+.profile-cutout-container {
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  border: 1px solid var(--border-medium);
-  background-color: var(--bg-card);
-  z-index: 1;
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
-  transition: transform var(--transition-medium), border-color var(--transition-medium);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  pointer-events: none;
 }
 
-.profile-card-wrapper:hover .profile-frame {
-  transform: scale(1.02);
-  border-color: rgba(56, 189, 248, 0.4);
-}
-
-.profile-img {
+.profile-cutout-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  filter: contrast(1.04) brightness(0.98);
+  height: auto;
+  max-height: 440px;
+  object-fit: contain;
+  object-position: bottom center;
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.7)) drop-shadow(0 0 24px rgba(99, 102, 241, 0.15));
+  transition: transform var(--transition-medium);
+  transform: translateY(0);
 }
 
-.profile-overlay-tag {
+.profile-portal-wrapper:hover .profile-cutout-img {
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* Smooth bottom fade so shirt blends naturally into pedestal */
+.portal-bottom-fade {
   position: absolute;
-  bottom: 12px;
-  left: 12px;
-  background: rgba(7, 7, 9, 0.85);
-  backdrop-filter: blur(8px);
-  border: 1px solid var(--border-subtle);
-  padding: 4px 10px;
-  border-radius: var(--radius-sm);
-  z-index: 2;
+  bottom: 0;
+  left: 1px;
+  right: 1px;
+  height: 45px;
+  background: linear-gradient(to top, rgba(10, 11, 17, 0.95) 0%, transparent 100%);
+  border-radius: 0 0 28px 28px;
+  z-index: 3;
+  pointer-events: none;
 }
-
-/* Corner Crosshairs */
-.corner-cross {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  z-index: 2;
-}
-
-.corner-cross::before, .corner-cross::after {
-  content: '';
-  position: absolute;
-  background-color: var(--accent-cyan);
-}
-
-.corner-cross::before {
-  width: 10px;
-  height: 1px;
-  top: 5px;
-  left: 0;
-}
-
-.corner-cross::after {
-  width: 1px;
-  height: 10px;
-  top: 0;
-  left: 5px;
-}
-
-.corner-cross.tl { top: -5px; left: -5px; }
-.corner-cross.tr { top: -5px; right: -5px; }
-.corner-cross.bl { bottom: -5px; left: -5px; }
-.corner-cross.br { bottom: -5px; right: -5px; }
 
 /* Scroll Down Indicator */
 .scroll-down-indicator {
@@ -2314,8 +2313,9 @@ button {
     order: -1;
   }
 
-  .profile-card-wrapper {
-    max-width: 280px;
+  .profile-portal-wrapper {
+    max-width: 320px;
+    height: 380px;
     margin: 0 auto;
   }
 
