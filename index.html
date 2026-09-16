@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhishek M Nair | AI/ML & Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Abhishek M Nair, an AI/ML and Full-Stack Developer building AI-powered applications, RAG systems, machine learning solutions and modern web applications." />
+  <meta name="keywords" content="Abhishek M Nair, AI Developer, ML Engineer, Full Stack Developer, RAG, FastAPI, React, FinFlow, SiteMind AI" />
+  <meta name="author" content="Abhishek M Nair" />
+  
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Abhishek M Nair | AI/ML & Full-Stack Developer" />
+  <meta property="og:description" content="Building intelligent systems. Engineering useful products. AI/ML, RAG pipelines, and full-stack platforms." />
+  <meta property="og:image" content="/profile.jpg" />
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <!-- Minimal Fast Preloader (<1s) -->
+  <div id="preloader" class="preloader" aria-hidden="true">
+    <div class="preloader-content">
+      <div class="preloader-logo">AMN</div>
+      <div class="preloader-bar">
+        <div class="preloader-fill"></div>
+      </div>
+      <span class="preloader-sub">INITIALIZING SYSTEM</span>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Custom Cursor (Desktop Only) -->
+  <div id="cursor-dot" class="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- Interactive Canvas Background -->
+  <canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Sticky Floating Header -->
+  <header id="main-header" class="main-header">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="#hero" class="nav-logo" aria-label="Home">
+        <span class="logo-mark">AMN</span>
+        <span class="logo-text">ABHISHEK M NAIR</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#work" class="nav-link" data-section="work">Work</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#hackathons" class="nav-link" data-section="hackathons">Hackathons</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#leadership" class="nav-link" data-section="leadership">Leadership</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <a href="https://github.com/Abhicodes001" target="_blank" rel="noopener noreferrer" class="nav-icon-link" aria-label="GitHub Profile" title="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/abhishek-m-nair-8254372b1" target="_blank" rel="noopener noreferrer" class="nav-icon-link" aria-label="LinkedIn Profile" title="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+        <a href="/Abhishek_M_Nair_Resume.pdf" target="_blank" download="Abhishek_M_Nair_Resume.pdf" class="btn btn-sm btn-outline magnetic-btn">
+          <span>Resume</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        <ul class="mobile-nav-links">
+          <li><a href="#about" class="mobile-nav-link">01 // About</a></li>
+          <li><a href="#work" class="mobile-nav-link">02 // Selected Work</a></li>
+          <li><a href="#experience" class="mobile-nav-link">03 // Experience</a></li>
+          <li><a href="#hackathons" class="mobile-nav-link">04 // Hackathons</a></li>
+          <li><a href="#skills" class="mobile-nav-link">05 // Tech Stack</a></li>
+          <li><a href="#education" class="mobile-nav-link">06 // Education</a></li>
+          <li><a href="#leadership" class="mobile-nav-link">07 // Leadership</a></li>
+          <li><a href="#certifications" class="mobile-nav-link">08 // Certifications</a></li>
+          <li><a href="#contact" class="mobile-nav-link">09 // Contact</a></li>
+        </ul>
+        <div class="mobile-actions">
+          <a href="/Abhishek_M_Nair_Resume.pdf" target="_blank" download="Abhishek_M_Nair_Resume.pdf" class="btn btn-primary w-full">
+            Download Resume (PDF)
+          </a>
+          <div class="mobile-socials">
+            <a href="https://github.com/Abhicodes001" target="_blank" rel="noopener">GitHub</a>
+            <span>•</span>
+            <a href="https://www.linkedin.com/in/abhishek-m-nair-8254372b1" target="_blank" rel="noopener">LinkedIn</a>
+            <span>•</span>
+            <a href="mailto:acrss09114@gmail.com">Email</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ============================================================ -->
+    <!-- 01 HERO SECTION                                              -->
+    <!-- ============================================================ -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        <!-- Hero Content Column -->
+        <div class="hero-content">
+          <div class="hero-status-pill reveal-item" style="--delay: 0.1s">
+            <span class="status-dot"></span>
+            <span class="status-text">Open to opportunities</span>
+          </div>
+
+          <div class="hero-eyebrow reveal-item" style="--delay: 0.25s">
+            <span class="mono-tag">AI/ML & FULL-STACK DEVELOPER</span>
+          </div>
+
+          <h1 class="hero-title reveal-item" style="--delay: 0.4s">
+            <span class="title-first">ABHISHEK</span>
+            <span class="title-last">M NAIR</span>
+          </h1>
+
+          <div class="hero-subtitle reveal-item" style="--delay: 0.65s">
+            <p class="tagline">
+              Building intelligent systems.<br />
+              Engineering useful products.
+            </p>
+          </div>
+
+          <p class="hero-desc reveal-item" style="--delay: 0.85s">
+            Computer Science & Engineering student specializing in Artificial Intelligence & Machine Learning, building AI-powered applications, RAG systems, full-stack platforms and practical machine learning solutions.
+          </p>
+
+          <div class="hero-actions reveal-item" style="--delay: 1.05s">
+            <a href="#work" class="btn btn-primary magnetic-btn">
+              <span>View My Work</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17l9.2-9.2M17 17V8H8"/>
+              </svg>
+            </a>
+            <a href="https://github.com/Abhicodes001" target="_blank" rel="noopener noreferrer" class="btn btn-secondary magnetic-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+            <a href="/Abhishek_M_Nair_Resume.pdf" target="_blank" download="Abhishek_M_Nair_Resume.pdf" class="btn btn-ghost magnetic-btn">
+              <span>Resume</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero-location reveal-item" style="--delay: 1.2s">
+            <span class="mono-meta">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              Thrissur, Kerala, India
+            </span>
+          </div>
+        </div>
+
+        <!-- Hero Photo Column -->
+        <div class="hero-visual reveal-item" style="--delay: 0.5s">
+          <div class="profile-card-wrapper" id="profile-card">
+            <div class="profile-glow"></div>
+            <div class="profile-frame">
+              <img 
+                src="/profile.jpg" 
+                alt="Abhishek M Nair - AI/ML & Full-Stack Developer" 
+                class="profile-img" 
+                loading="eager"
+                width="420"
+                height="420"
+              />
+              <div class="profile-overlay-tag">
+                <span class="mono-tag">ENG // AI & FULL-STACK</span>
+              </div>
+            </div>
+            <!-- Interactive badge corners -->
+            <div class="corner-cross tl"></div>
+            <div class="corner-cross tr"></div>
+            <div class="corner-cross bl"></div>
+            <div class="corner-cross br"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Scroll Indicator -->
+      <a href="#about" class="scroll-down-indicator" aria-label="Scroll to About Section">
+        <span class="scroll-text mono-tag">SCROLL</span>
+        <div class="mouse-icon">
+          <div class="wheel"></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 02 ABOUT SECTION                                             -->
+    <!-- ============================================================ -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-num mono-tag">01 // IDENTITY & ARCHITECTURE</span>
+          <h2 class="section-title">ABOUT ME</h2>
+        </div>
+
+        <div class="about-grid">
+          <!-- Text column -->
+          <div class="about-text-col">
+            <p class="about-lead">
+              I’m a Computer Science & Engineering student specializing in Artificial Intelligence & Machine Learning, with a strong interest in building practical AI systems and full-stack applications.
+            </p>
+            <p class="about-body">
+              I work across the stack — from React interfaces and FastAPI backends to machine learning models, LLM APIs, RAG pipelines, databases and deployment workflows.
+            </p>
+            <p class="about-body">
+              I enjoy turning ideas into usable software and exploring how AI can solve real-world problems.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <span class="highlight-value">End-to-End</span>
+                <span class="highlight-label">Architecture: Data models to production UI</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-value">Pragmatic AI</span>
+                <span class="highlight-label">Applied RAG, Vector Search & Graph Analytics</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-value">Fast Prototyping</span>
+                <span class="highlight-label">Hackathon-tested execution under tight constraints</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visual stack column -->
+          <div class="about-visual-col">
+            <div class="stack-pipeline" id="stack-pipeline">
+              <div class="stack-pipeline-header">
+                <span class="mono-tag">FULL SPECTRUM CAPABILITY</span>
+                <span class="stack-status-dot"></span>
+              </div>
+
+              <!-- Layer 1: AI / ML -->
+              <div class="stack-layer" data-layer="1">
+                <div class="layer-header">
+                  <span class="layer-step mono-tag">01</span>
+                  <span class="layer-title">AI / ML & INTELLIGENCE</span>
+                </div>
+                <p class="layer-desc">RAG pipelines, FAISS vector search, LLM integrations (Groq, OpenAI, Gemini), Graph Analytics & Classical ML.</p>
+                <div class="layer-tags">
+                  <span>FastAPI</span>
+                  <span>LangChain</span>
+                  <span>FAISS</span>
+                  <span>Neo4j</span>
+                </div>
+              </div>
+
+              <div class="pipeline-connector">
+                <svg width="20" height="24" viewBox="0 0 20 24" fill="none">
+                  <path d="M10 0v24M10 24l5-5M10 24l-5-5" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+
+              <!-- Layer 2: Backend -->
+              <div class="stack-layer" data-layer="2">
+                <div class="layer-header">
+                  <span class="layer-step mono-tag">02</span>
+                  <span class="layer-title">BACKEND & DATA LAYER</span>
+                </div>
+                <p class="layer-desc">Scalable REST endpoints, relational & graph schemas, authentication, task queuing & containerized runtimes.</p>
+                <div class="layer-tags">
+                  <span>FastAPI</span>
+                  <span>PostgreSQL</span>
+                  <span>Docker</span>
+                  <span>Redis</span>
+                </div>
+              </div>
+
+              <div class="pipeline-connector">
+                <svg width="20" height="24" viewBox="0 0 20 24" fill="none">
+                  <path d="M10 0v24M10 24l5-5M10 24l-5-5" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+
+              <!-- Layer 3: Frontend -->
+              <div class="stack-layer" data-layer="3">
+                <div class="layer-header">
+                  <span class="layer-step mono-tag">03</span>
+                  <span class="layer-title">FRONTEND & INTERFACE</span>
+                </div>
+                <p class="layer-desc">High-speed reactive client experiences, responsive layouts, data visualization dashboards & micro-interactions.</p>
+                <div class="layer-tags">
+                  <span>React.js</span>
+                  <span>TypeScript</span>
+                  <span>Vite</span>
+                  <span>Tailwind</span>
+                </div>
+              </div>
+
+              <div class="pipeline-connector">
+                <svg width="20" height="24" viewBox="0 0 20 24" fill="none">
+                  <path d="M10 0v24M10 24l5-5M10 24l-5-5" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+
+              <!-- Layer 4: Product -->
+              <div class="stack-layer" data-layer="4">
+                <div class="layer-header">
+                  <span class="layer-step mono-tag">04</span>
+                  <span class="layer-title">PRODUCT & DEPLOYMENT</span>
+                </div>
+                <p class="layer-desc">Real-world usability, forensic investigations, accessibility platforms, and measurable software solutions.</p>
+                <div class="layer-tags">
+                  <span>Git Workflows</span>
+                  <span>CI/CD</span>
+                  <span>Cloud Deployment</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- QUICK PROFILE STRIP                                          -->
+    <!-- ============================================================ -->
+    <section class="profile-strip-section" aria-label="Key Qualifications">
+      <div class="container">
+        <div class="profile-strip">
+          <div class="strip-item">
+            <span class="strip-num mono-tag">ACADEMIC</span>
+            <h3 class="strip-title">B.Tech CSE — AI & ML</h3>
+            <span class="strip-sub">2023–2027 • NCERC Kerala</span>
+          </div>
+          <div class="strip-item">
+            <span class="strip-num mono-tag">LEADERSHIP</span>
+            <h3 class="strip-title">5 Years NCC Cadet</h3>
+            <span class="strip-sub">'C' Certificate Holder • Camp Leader</span>
+          </div>
+          <div class="strip-item">
+            <span class="strip-num mono-tag">INDUSTRY</span>
+            <h3 class="strip-title">Full Stack Developer</h3>
+            <span class="strip-sub">Skyniche Technologies • On-site Intern</span>
+          </div>
+          <div class="strip-item">
+            <span class="strip-num mono-tag">HACKATHONS</span>
+            <h3 class="strip-title">Hackathon Finalist</h3>
+            <span class="strip-sub">CideCode 2026 • SIH 2026 • DeCoDe</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 03 SELECTED WORK (CENTERPIECE)                               -->
+    <!-- ============================================================ -->
+    <section id="work" class="section work-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-num mono-tag">02 // CENTERPIECE</span>
+          <h2 class="section-title">SELECTED WORK</h2>
+          <p class="section-sub">From intelligent systems to full-stack products.</p>
+        </div>
+
+        <div class="featured-projects-grid">
+          <!-- ---------------------------------------------------- -->
+          <!-- 01 FINFLOW                                           -->
+          <!-- ---------------------------------------------------- -->
+          <article class="project-card tilt-card" data-project="finflow">
+            <div class="project-card-inner">
+              <div class="card-glow"></div>
+              <div class="project-header">
+                <div class="project-badge-row">
+                  <span class="project-num mono-tag">PROJECT 01</span>
+                  <span class="badge badge-accent">HACKATHON FINALIST</span>
+                </div>
+                <span class="project-category mono-tag">AI / FINTECH / FRAUD DETECTION</span>
+              </div>
+
+              <div class="project-body">
+                <h3 class="project-title">FinFlow</h3>
+                <h4 class="project-subtitle">Forensic Bank Statement Analysis System</h4>
+                <p class="project-desc">
+                  An AI-powered financial analysis platform designed to identify suspicious transactions, analyze financial relationships and support forensic investigation workflows.
+                </p>
+
+                <!-- Mini Interactive Architecture Visual -->
+                <div class="arch-visual-box">
+                  <div class="arch-box-title mono-tag">SYSTEM ARCHITECTURE // GRAPH & FRAUD PIPELINE</div>
+                  <div class="arch-flow">
+                    <span class="arch-node">Data</span>
+                    <span class="arch-arrow">→</span>
+                    <span class="arch-node">Processing</span>
+                    <span class="arch-arrow">→</span>
+                    <span class="arch-node highlight">Anomaly Detection + Graph</span>
+                    <span class="arch-arrow">→</span>
+                    <span class="arch-node">Risk Scoring</span>
+                    <span class="arch-arrow">→</span>
+                    <span class="arch-node">Dashboard</span>
+                  </div>
+                </div>
+
+                <div class="project-meta-info">
+                  <div class="meta-row">
+                    <span class="meta-label mono-tag">CONTEXT</span>
+                    <span class="meta-val">CideCode Karnataka Police Tech Hackathon 2026 (Team Delta Force)</span>
+                  </div>
+                  <div class="meta-row">
+                    <span class="meta-label mono-tag">STATUS</span>
+                    <span class="meta-val text-emerald">Hackathon Prototype Finalist</span>
+                  </div>
+                </div>
+
+                <div class="tech-tags">
+                  <span>React</span>
+                  <span>FastAPI</span>
+                  <span>Spring Boot</span>
+                  <span>PostgreSQL</span>
+                  <span>Neo4j</span>
+                  <span>Python</span>
+                  <span>Docker</span>
+                  <span>Celery</span>
+                  <span>Redis</span>
+                  <span>Graph Analytics</span>
+                </div>
+              </div>
+
+              <div class="project-footer">
+                <button type="button" class="btn btn-primary btn-sm view-details-btn" data-project="finflow">
+                  <span>View Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </button>
+                <a href="https://github.com/Abhicodes001" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ---------------------------------------------------- -->
+          <!-- 02 SITEMIND AI                                       -->
+          <!-- ---------------------------------------------------- -->
+          <article class="project-card tilt-card" data-project="sitemind">
+            <div class="project-card-inner">
+              <div class="card-glow"></div>
+              <div class="project-header">
+                <div class="project-badge-row">
+                  <span class="project-num mono-tag">PROJECT 02</span>
+                  <span class="badge badge-purple">RAG PLATFORM</span>
+                </div>
+                <span class="project-category mono-tag">GENERATIVE AI / RAG / FULL STACK</span>
+              </div>
+
+              <div class="project-body">
+                <h3 class="project-title">SiteMind AI</h3>
+                <h4 class="project-subtitle">AI-Powered Website Chat Assistant</h4>
+                <p class="project-desc">
+                  A Retrieval-Augmented Generation platform that allows users to interact with website content through an AI assistant, with intelligent chunking and verifiable citations.
+                </p>
+
+                <!-- Mini Animated RAG Visual -->
+                <div class="arch-visual-box">
+                  <div class="arch-box-title mono-tag">RAG ARCHITECTURE // INGESTION TO CITATION</div>
+                  <div class="arch-flow">
+                    <span class="arch-node">URL</span>
+                    <span class="arch-arrow">→</span>
+                    <span class="arch-node">Crawl</span>
+                    <span class="arch-arrow">→</span>
+                    <span class="arch-node">Chunk</span>
+                    <span class="arch-arrow">→</span>
+                    <span class="arch-node">Embed</span>
+                    <span class="arch-arrow">→</span>
+                    <span class="arch-node highlight">FAISS Vector Search</span>
+                    <span class="arch-arrow">→</span>
+                    <span class="arch-node">RAG</span>
+                    <span class="arch-arrow">→</span>
+                    <span class="arch-node">Answer + Citations</span>
+                  </div>
+                </div>
+
+                <div class="project-meta-info">
+                  <div class="meta-row">
+                    <span class="meta-label mono-tag">CAPABILITY</span>
+                    <span class="meta-val">Semantic chunking, source citations, multi-model LLMs</span>
+                  </div>
+                  <div class="meta-row">
+                    <span class="meta-label mono-tag">PROVIDERS</span>
+                    <span class="meta-val">Groq, OpenAI, Gemini, OpenRouter</span>
+                  </div>
+                </div>
+
+                <div class="tech-tags">
+                  <span>React</span>
+                  <span>TypeScript</span>
+                  <span>Vite</span>
+                  <span>FastAPI</span>
+                  <span>LangChain</span>
+                  <span>FAISS</span>
+                  <span>Docker</span>
+                  <span>OpenAI</span>
+                  <span>Gemini</span>
+                  <span>Groq</span>
+                </div>
+              </div>
+
+              <div class="project-footer">
+                <button type="button" class="btn btn-primary btn-sm view-details-btn" data-project="sitemind">
+                  <span>View Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </button>
+                <a href="https://github.com/Abhicodes001" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ---------------------------------------------------- -->
+          <!-- 03 SOLAR → GREEN HYDROGEN                            -->
+          <!-- ---------------------------------------------------- -->
+          <article class="project-card tilt-card" data-project="solar">
+            <div class="project-card-inner">
+              <div class="card-glow"></div>
+              <div class="project-header">
+                <div class="project-badge-row">
+                  <span class="project-num mono-tag">PROJECT 03</span>
+                  <span class="badge badge-warning">FINAL YEAR PROJECT — IN DEVELOPMENT</span>
+                </div>
+                <span class="project-category mono-tag">AI / MACHINE LEARNING / RENEWABLE ENERGY</span>
+              </div>
+
+              <div class="project-body">
+                <h3 class="project-title">Solar → Green Hydrogen</h3>
+                <h4 class="project-subtitle">Solar-Based Green Hydrogen Forecasting System</h4>
+                <p class="project-desc">
+                  An AI-based forecasting framework focused on estimating solar-powered green hydrogen production using regional weather and environmental parameters.
+                </p>
+
+                <!-- Mini Energy Pipeline Visual -->
+                <div class="arch-visual-box">
+                  <div class="arch-box-title mono-tag">ENERGY FORECASTING PIPELINE // KERALA REGION</div>
+                  <div class="arch-flow">
+                    <span class="arch-node">Weather Data</span>
+                    <span class="arch-arrow">→</span>
+                    <span class="arch-node">Solar Power Forecast</span>
+                    <span class="arch-arrow">→</span>
+                    <span class="arch-node highlight">Electrolysis Estimation</span>
+                    <span class="arch-arrow">→</span>
+                    <span class="arch-node">Green Hydrogen Yield</span>
+                  </div>
+                </div>
+
+                <div class="project-meta-info">
+                  <div class="meta-row">
+                    <span class="meta-label mono-tag">INPUTS</span>
+                    <span class="meta-val">Solar Irradiance, Temperature, Humidity, Wind Speed</span>
+                  </div>
+                  <div class="meta-row">
+                    <span class="meta-label mono-tag">MODELS</span>
+                    <span class="meta-val">Random Forest, XGBoost, GRU, LSTM</span>
+                  </div>
+                </div>
+
+                <div class="tech-tags">
+                  <span>Python</span>
+                  <span>Random Forest</span>
+                  <span>XGBoost</span>
+                  <span>GRU</span>
+                  <span>LSTM</span>
+                  <span>Scikit-Learn</span>
+                  <span>Time Series</span>
+                </div>
+              </div>
+
+              <div class="project-footer">
+                <button type="button" class="btn btn-primary btn-sm view-details-btn" data-project="solar">
+                  <span>View Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </button>
+                <span class="mono-meta text-warning">● In Active Development</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ---------------------------------------------------- -->
+          <!-- 04 AUDIO → SIGN LANGUAGE                             -->
+          <!-- ---------------------------------------------------- -->
+          <article class="project-card tilt-card" data-project="audio-sign">
+            <div class="project-card-inner">
+              <div class="card-glow"></div>
+              <div class="project-header">
+                <div class="project-badge-row">
+                  <span class="project-num mono-tag">PROJECT 04</span>
+                  <span class="badge badge-cyan">ACCESSIBILITY SYSTEM</span>
+                </div>
+                <span class="project-category mono-tag">AI / ACCESSIBILITY / NLP / COMPUTER VISION</span>
+              </div>
+
+              <div class="project-body">
+                <h3 class="project-title">Audio → Sign Language</h3>
+                <h4 class="project-subtitle">AI Audio-to-Sign Language Converter</h4>
+                <p class="project-desc">
+                  An accessibility-focused system that converts spoken English into sign-language representations using speech recognition, NLP processing and animated sign mapping.
+                </p>
+
+                <!-- Mini Animated Visual -->
+                <div class="arch-visual-box">
+                  <div class="arch-box-title mono-tag">PROCESSING PIPELINE // SPEECH TO GESTURE</div>
+                  <div class="arch-flow">
+                    <span class="arch-node">Speech Input</span>
+                    <span class="arch-arrow">→</span>
+                    <span class="arch-node">Speech Recognition</span>
+                    <span class="arch-arrow">→</span>
+                    <span class="arch-node highlight">NLP Tokenizer</span>
+                    <span class="arch-arrow">→</span>
+                    <span class="arch-node">Sign Mapping</span>
+                    <span class="arch-arrow">→</span>
+                    <span class="arch-node">Animated Gesture</span>
+                  </div>
+                </div>
+
+                <div class="project-meta-info">
+                  <div class="meta-row">
+                    <span class="meta-label mono-tag">MODES</span>
+                    <span class="meta-val">Microphone input, text input, audio upload</span>
+                  </div>
+                  <div class="meta-row">
+                    <span class="meta-label mono-tag">FALLBACK</span>
+                    <span class="meta-val">Character-level handling for unknown vocabulary</span>
+                  </div>
+                </div>
+
+                <div class="tech-tags">
+                  <span>Python</span>
+                  <span>Flask</span>
+                  <span>SpeechRecognition</span>
+                  <span>NLTK</span>
+                  <span>Computer Vision</span>
+                  <span>JavaScript</span>
+                </div>
+              </div>
+
+              <div class="project-footer">
+                <a href="https://audio-to-sign-lang.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm magnetic-btn">
+                  <span>Live Demo</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                  </svg>
+                </a>
+                <button type="button" class="btn btn-secondary btn-sm view-details-btn" data-project="audio-sign">
+                  <span>View Details</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- ---------------------------------------------------- -->
+        <!-- ADDITIONAL PROJECTS / HACKATHON BUILDS               -->
+        <!-- ---------------------------------------------------- -->
+        <div class="sub-projects-section">
+          <div class="sub-section-header">
+            <span class="mono-tag">HACKATHON BUILD</span>
+            <h3 class="sub-section-title">SkillVoice</h3>
+          </div>
+
+          <div class="sub-project-card">
+            <div class="sub-project-content">
+              <div class="badge badge-accent mb-2">12-HOUR HACKATHON</div>
+              <h4 class="sub-project-heading">SkillVoice — Voice-First AI Upskilling Platform</h4>
+              <p class="sub-project-desc">
+                A voice-first AI platform designed to support upskilling and connect users with verified opportunities, rapidly engineered under a strict 12-hour build window at the DeCoDe Hackathon.
+              </p>
+              <div class="tech-tags">
+                <span>React</span>
+                <span>Vite</span>
+                <span>FastAPI</span>
+                <span>Supabase</span>
+                <span>Groq</span>
+                <span>ElevenLabs</span>
+                <span>FastEmbed</span>
+                <span>RAG</span>
+              </div>
+            </div>
+            <div class="sub-project-meta">
+              <div class="meta-stat">
+                <span class="stat-num mono-tag">12h</span>
+                <span class="stat-lbl">Sprint Time</span>
+              </div>
+              <div class="meta-stat">
+                <span class="stat-num mono-tag">DeCoDe</span>
+                <span class="stat-lbl">National Event</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ---------------------------------------------------- -->
+        <!-- MORE EXPERIMENTS                                     -->
+        <!-- ---------------------------------------------------- -->
+        <div class="experiments-section">
+          <div class="sub-section-header">
+            <span class="mono-tag">ARCHIVE</span>
+            <h3 class="sub-section-title">MORE EXPERIMENTS</h3>
+          </div>
+
+          <div class="experiments-grid">
+            <div class="experiment-card">
+              <div class="exp-header">
+                <span class="mono-tag">COMPUTER VISION</span>
+              </div>
+              <h4 class="exp-title">Hand Gesture Recognition</h4>
+              <p class="exp-desc">Real-time hand posture and gesture classification pipeline using convolutional neural networks.</p>
+              <div class="exp-tech">CNN • OpenCV • Python</div>
+            </div>
+
+            <div class="experiment-card">
+              <div class="exp-header">
+                <span class="mono-tag">CLASSIFICATION</span>
+              </div>
+              <h4 class="exp-title">PetVision</h4>
+              <p class="exp-desc">Feature extraction via Histogram of Oriented Gradients (HOG) combined with Support Vector Machines for animal classification.</p>
+              <div class="exp-tech">HOG + SVM • Scikit-Learn</div>
+            </div>
+
+            <div class="experiment-card">
+              <div class="exp-header">
+                <span class="mono-tag">PREDICTIVE ML</span>
+              </div>
+              <h4 class="exp-title">House Price Prediction</h4>
+              <p class="exp-desc">Statistical regression framework modeling housing valuations against multi-parameter real estate attributes.</p>
+              <div class="exp-tech">Linear Regression • Pandas</div>
+            </div>
+
+            <div class="experiment-card">
+              <div class="exp-header">
+                <span class="mono-tag">DOCUMENT SECURITY</span>
+              </div>
+              <h4 class="exp-title">Fake Aadhaar Detection</h4>
+              <p class="exp-desc">Image processing and layout verification heuristics to flag anomalies in identity cards.</p>
+              <div class="exp-tech">OpenCV • Image Processing</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 04 EXPERIENCE                                                -->
+    <!-- ============================================================ -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-num mono-tag">03 // PROFESSIONAL EXPERIENCE</span>
+          <h2 class="section-title">EXPERIENCE</h2>
+          <p class="section-sub">Production engineering and cross-functional team collaboration.</p>
+        </div>
+
+        <div class="experience-timeline">
+          <div class="timeline-track" id="timeline-track"></div>
+
+          <div class="timeline-item active">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <div class="timeline-role-badge mono-tag">ON-SITE INTERNSHIP • 2026</div>
+                  <h3 class="timeline-company">SKYNICHE TECHNOLOGIES</h3>
+                  <div class="timeline-location">Palakkad, Kerala</div>
+                </div>
+                <div class="timeline-title-box">
+                  <span class="role-title">Full Stack Developer Intern</span>
+                </div>
+              </div>
+
+              <p class="timeline-desc">
+                Worked as an on-site Full Stack Developer, contributing to real-world web applications and collaborating with experienced developers.
+              </p>
+
+              <div class="responsibilities-block">
+                <span class="mono-tag block-label">CORE RESPONSIBILITIES & WORKFLOWS</span>
+                <div class="resp-grid">
+                  <div class="resp-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 6L9 17l-5-5"/>
+                    </svg>
+                    <span>React.js frontend development & Vite optimization</span>
+                  </div>
+                  <div class="resp-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 6L9 17l-5-5"/>
+                    </svg>
+                    <span>FastAPI backend endpoints & RESTful API integration</span>
+                  </div>
+                  <div class="resp-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 6L9 17l-5-5"/>
+                    </svg>
+                    <span>SQL schema design, queries, and robust CRUD operations</span>
+                  </div>
+                  <div class="resp-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 6L9 17l-5-5"/>
+                    </svg>
+                    <span>Secure authentication flows & session handling</span>
+                  </div>
+                  <div class="resp-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 6L9 17l-5-5"/>
+                    </svg>
+                    <span>Debugging, unit testing, and team code reviews</span>
+                  </div>
+                  <div class="resp-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 6L9 17l-5-5"/>
+                    </svg>
+                    <span>Git version control workflows & staging deployment pipelines</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tech-tags mt-4">
+                <span>React.js</span>
+                <span>Vite</span>
+                <span>FastAPI</span>
+                <span>REST APIs</span>
+                <span>SQL</span>
+                <span>Git</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 05 HACKATHONS                                                -->
+    <!-- ============================================================ -->
+    <section id="hackathons" class="section hackathons-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-num mono-tag">04 // RAPID PROTOTYPING</span>
+          <h2 class="section-title">HACKATHONS & BUILDING UNDER PRESSURE</h2>
+          <p class="section-sub">Developing robust solutions under competitive deadlines.</p>
+        </div>
+
+        <div class="hackathon-cards-grid">
+          <!-- SIH 2026 -->
+          <div class="hackathon-card">
+            <div class="hackathon-top">
+              <span class="mono-tag year-tag">2026 // NATIONAL</span>
+              <span class="badge badge-accent">MOVING FORWARD</span>
+            </div>
+            <h3 class="hackathon-name">Smart India Hackathon (SIH) 2026</h3>
+            <div class="hackathon-team mono-meta">Team Delta Force</div>
+            
+            <div class="hackathon-detail-block">
+              <span class="mono-tag lbl">PROBLEM STATEMENT</span>
+              <p>AI-powered intelligent assistant for Indian Standards & Bureau of Indian Standards (BIS) services.</p>
+            </div>
+
+            <div class="hackathon-status-row">
+              <span class="status-indicator-dot"></span>
+              <span class="status-msg">Cleared Internal Screening Round / Moving Forward</span>
+            </div>
+          </div>
+
+          <!-- CideCode 2026 -->
+          <div class="hackathon-card featured-hackathon">
+            <div class="hackathon-top">
+              <span class="mono-tag year-tag">2026 // NATIONAL</span>
+              <span class="badge badge-accent">NATIONAL FINALIST</span>
+            </div>
+            <h3 class="hackathon-name">CideCode National Hackathon 2026</h3>
+            <div class="hackathon-team mono-meta">Team Delta Force • Karnataka Police Tech</div>
+            
+            <div class="hackathon-detail-block">
+              <span class="mono-tag lbl">PROJECT DEVELOPED</span>
+              <h4 class="highlight-text">FinFlow — Forensic Bank Statement Analysis</h4>
+              <p>Engineered an end-to-end platform for automated anomaly detection, transaction clustering, and graph relationship analysis under intensive hackathon pressure.</p>
+            </div>
+
+            <div class="hackathon-status-row">
+              <span class="status-indicator-dot success"></span>
+              <span class="status-msg text-emerald">Selected as Finalist among nationwide teams</span>
+            </div>
+          </div>
+
+          <!-- DeCoDe Hackathon -->
+          <div class="hackathon-card">
+            <div class="hackathon-top">
+              <span class="mono-tag year-tag">12-HOUR SPRINT</span>
+              <span class="badge badge-cyan">RAPID BUILD</span>
+            </div>
+            <h3 class="hackathon-name">DeCoDe Hackathon</h3>
+            <div class="hackathon-team mono-meta">Duration: 12 Hours</div>
+            
+            <div class="hackathon-detail-block">
+              <span class="mono-tag lbl">PROJECT DEVELOPED</span>
+              <h4 class="highlight-text">SkillVoice — Voice-First AI Platform</h4>
+              <p>Rapidly built an AI-powered voice-first platform connecting users to upskilling and verified opportunities under extreme 12-hour time constraints.</p>
+            </div>
+
+            <div class="hackathon-status-row">
+              <span class="status-indicator-dot success"></span>
+              <span class="status-msg">Production-ready MVP built & presented</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 06 TECH STACK                                                -->
+    <!-- ============================================================ -->
+    <section id="skills" class="section tech-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-num mono-tag">05 // TECHNICAL CAPABILITIES</span>
+          <h2 class="section-title">TECH STACK</h2>
+          <p class="section-sub">Production tools, frameworks, and foundational systems.</p>
+        </div>
+
+        <div class="tech-clusters-grid">
+          <!-- Languages -->
+          <div class="tech-cluster-card">
+            <div class="cluster-header">
+              <span class="mono-tag">01 // CORE</span>
+              <h3 class="cluster-title">Languages</h3>
+            </div>
+            <div class="cluster-chips">
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">Java</span>
+              <span class="tech-chip">C</span>
+              <span class="tech-chip">C++</span>
+              <span class="tech-chip">JavaScript</span>
+              <span class="tech-chip">SQL</span>
+            </div>
+          </div>
+
+          <!-- AI / Machine Learning -->
+          <div class="tech-cluster-card highlight-cluster">
+            <div class="cluster-header">
+              <span class="mono-tag">02 // INTELLIGENCE</span>
+              <h3 class="cluster-title">AI / Machine Learning</h3>
+            </div>
+            <div class="cluster-chips">
+              <span class="tech-chip">TensorFlow</span>
+              <span class="tech-chip">PyTorch</span>
+              <span class="tech-chip">Scikit-learn</span>
+              <span class="tech-chip">NLP</span>
+              <span class="tech-chip">Computer Vision</span>
+              <span class="tech-chip">Deep Learning</span>
+              <span class="tech-chip">Time Series</span>
+            </div>
+          </div>
+
+          <!-- Generative AI -->
+          <div class="tech-cluster-card highlight-cluster">
+            <div class="cluster-header">
+              <span class="mono-tag">03 // LLM & RETRIEVAL</span>
+              <h3 class="cluster-title">Generative AI & RAG</h3>
+            </div>
+            <div class="cluster-chips">
+              <span class="tech-chip">RAG Pipelines</span>
+              <span class="tech-chip">LangChain</span>
+              <span class="tech-chip">FAISS</span>
+              <span class="tech-chip">Embeddings</span>
+              <span class="tech-chip">Vector Search</span>
+              <span class="tech-chip">OpenAI API</span>
+              <span class="tech-chip">Gemini API</span>
+              <span class="tech-chip">Groq API</span>
+              <span class="tech-chip">OpenRouter</span>
+            </div>
+          </div>
+
+          <!-- Frontend -->
+          <div class="tech-cluster-card">
+            <div class="cluster-header">
+              <span class="mono-tag">04 // INTERFACE</span>
+              <h3 class="cluster-title">Frontend Engineering</h3>
+            </div>
+            <div class="cluster-chips">
+              <span class="tech-chip">React.js</span>
+              <span class="tech-chip">TypeScript</span>
+              <span class="tech-chip">HTML5</span>
+              <span class="tech-chip">CSS3</span>
+              <span class="tech-chip">Tailwind CSS</span>
+              <span class="tech-chip">Vite</span>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="tech-cluster-card">
+            <div class="cluster-header">
+              <span class="mono-tag">05 // SERVERS & APIS</span>
+              <h3 class="cluster-title">Backend Architecture</h3>
+            </div>
+            <div class="cluster-chips">
+              <span class="tech-chip">FastAPI</span>
+              <span class="tech-chip">Flask</span>
+              <span class="tech-chip">Node.js</span>
+              <span class="tech-chip">REST APIs</span>
+              <span class="tech-chip">Celery</span>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="tech-cluster-card">
+            <div class="cluster-header">
+              <span class="mono-tag">06 // PERSISTENCE</span>
+              <h3 class="cluster-title">Databases & Graphs</h3>
+            </div>
+            <div class="cluster-chips">
+              <span class="tech-chip">PostgreSQL</span>
+              <span class="tech-chip">Neo4j (Graph DB)</span>
+              <span class="tech-chip">Supabase</span>
+              <span class="tech-chip">Redis</span>
+            </div>
+          </div>
+
+          <!-- Tools & Platforms -->
+          <div class="tech-cluster-card full-span-cluster">
+            <div class="cluster-header">
+              <span class="mono-tag">07 // INFRASTRUCTURE</span>
+              <h3 class="cluster-title">Tools & Development Environment</h3>
+            </div>
+            <div class="cluster-chips">
+              <span class="tech-chip">Docker</span>
+              <span class="tech-chip">Git</span>
+              <span class="tech-chip">GitHub</span>
+              <span class="tech-chip">VS Code</span>
+              <span class="tech-chip">Linux CLI</span>
+              <span class="tech-chip">Postman</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 07 EDUCATION                                                 -->
+    <!-- ============================================================ -->
+    <section id="education" class="section education-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-num mono-tag">06 // ACADEMIC FOUNDATION</span>
+          <h2 class="section-title">EDUCATION</h2>
+        </div>
+
+        <div class="education-list">
+          <div class="edu-card">
+            <div class="edu-header">
+              <div>
+                <span class="edu-period mono-tag">2023 – 2027 // CURRENT</span>
+                <h3 class="edu-degree">B.Tech — Computer Science & Engineering</h3>
+                <h4 class="edu-specialization">Specialization: Artificial Intelligence & Machine Learning</h4>
+              </div>
+              <div class="edu-inst-tag">Undergraduate</div>
+            </div>
+            <div class="edu-institute">
+              Nehru College of Engineering & Research Centre (NCERC), Kerala
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-header">
+              <div>
+                <span class="edu-period mono-tag">HIGHER SECONDARY</span>
+                <h3 class="edu-degree">Higher Secondary — Computer Science</h3>
+              </div>
+              <div class="edu-score mono-tag">Score: 90%</div>
+            </div>
+            <div class="edu-institute">
+              Sreesankara Oriental Higher Secondary School
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-header">
+              <div>
+                <span class="edu-period mono-tag">SECONDARY SCHOOL</span>
+                <h3 class="edu-degree">Secondary School (Class X)</h3>
+              </div>
+              <div class="edu-score mono-tag">Score: 95%</div>
+            </div>
+            <div class="edu-institute">
+              GVHSS Thiruvilwamala
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 08 LEADERSHIP / NCC                                          -->
+    <!-- ============================================================ -->
+    <section id="leadership" class="section leadership-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-num mono-tag">07 // LEADERSHIP BEYOND CODE</span>
+          <h2 class="section-title">NATIONAL CADET CORPS (NCC)</h2>
+          <p class="section-sub">Five years of discipline, tactical execution, and large-scale command coordination.</p>
+        </div>
+
+        <div class="leadership-grid">
+          <div class="ncc-summary-card">
+            <div class="ncc-badge-row">
+              <span class="badge badge-accent">'C' CERTIFICATE HOLDER</span>
+              <span class="mono-tag">2019 – 2024</span>
+            </div>
+            <h3 class="ncc-title">5 Years of NCC Service & Cadre Leadership</h3>
+            
+            <div class="ncc-highlight-box">
+              <div class="highlight-title mono-tag">KEY COMMAND MILESTONE</div>
+              <p class="highlight-quote">
+                "Led and coordinated approximately 150–200 cadets during an Army Attachment Camp, overseeing schedules, parade drills, field discipline, and communication."
+              </p>
+            </div>
+
+            <div class="ncc-pillars">
+              <div class="pillar-item">
+                <span class="pillar-label mono-tag">DISCIPLINE</span>
+                <span class="pillar-desc">5 years of sustained military-style drill and protocol</span>
+              </div>
+              <div class="pillar-item">
+                <span class="pillar-label mono-tag">COORDINATION</span>
+                <span class="pillar-desc">Command of multi-contingent groups in field environments</span>
+              </div>
+              <div class="pillar-item">
+                <span class="pillar-label mono-tag">DECISION MAKING</span>
+                <span class="pillar-desc">High-pressure situation management across multiple camps</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Progressive Visual Timeline -->
+          <div class="ncc-progression-card">
+            <div class="progression-title mono-tag">TIMELINE OF SERVICE // 2019 TO 2024</div>
+            <div class="ncc-timeline-steps">
+              <div class="ncc-step">
+                <div class="step-num mono-tag">2019</div>
+                <div class="step-content">
+                  <h4>NCC Induction & Foundational Training</h4>
+                  <p>Enrolled in cadet training, physical conditioning, and foundational protocols.</p>
+                </div>
+              </div>
+
+              <div class="ncc-step">
+                <div class="step-num mono-tag">2020–2022</div>
+                <div class="step-content">
+                  <h4>Multiple Training Camps & Contingent Drills</h4>
+                  <p>Participated in intensive tactical camps, firing drills, and inter-unit training.</p>
+                </div>
+              </div>
+
+              <div class="ncc-step">
+                <div class="step-num mono-tag">2023</div>
+                <div class="step-content">
+                  <h4>Army Attachment Camp — Commander Lead</h4>
+                  <p>Selected to lead and coordinate 150–200 cadets in live army attachment operational settings.</p>
+                </div>
+              </div>
+
+              <div class="ncc-step highlight">
+                <div class="step-num mono-tag">2024</div>
+                <div class="step-content">
+                  <h4>'C' Certificate Awarded</h4>
+                  <p>Graduated with the highest qualification achievable by an NCC cadet.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 09 CERTIFICATIONS                                            -->
+    <!-- ============================================================ -->
+    <section id="certifications" class="section cert-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-num mono-tag">08 // CONTINUOUS LEARNING</span>
+          <h2 class="section-title">CERTIFICATIONS</h2>
+        </div>
+
+        <div class="cert-grid">
+          <div class="cert-card">
+            <div class="cert-badge mono-tag">UDEMY</div>
+            <h3 class="cert-name">Python Programming</h3>
+            <span class="cert-issuer">Udemy Verified</span>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-badge mono-tag">HACKERRANK</div>
+            <h3 class="cert-name">Problem Solving (Basic)</h3>
+            <span class="cert-issuer">HackerRank Certified</span>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-badge mono-tag">CISCO</div>
+            <h3 class="cert-name">Cybersecurity Basics</h3>
+            <span class="cert-issuer">Cisco Networking Academy</span>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-badge mono-tag">INFOSYS</div>
+            <h3 class="cert-name">Introduction to Artificial Intelligence</h3>
+            <span class="cert-issuer">Infosys Springboard</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 10 CONTACT SECTION                                           -->
+    <!-- ============================================================ -->
+    <section id="contact" class="section contact-section">
+      <div class="contact-glow-orb" aria-hidden="true"></div>
+      <div class="container contact-container">
+        <div class="contact-content text-center">
+          <span class="mono-tag section-num">09 // GET IN TOUCH</span>
+          <h2 class="contact-title">LET'S BUILD SOMETHING USEFUL.</h2>
+          <p class="contact-desc">
+            Interested in AI, full-stack development, or building practical technology? Let's connect.
+          </p>
+
+          <!-- Contact Channels -->
+          <div class="contact-channels">
+            <a href="mailto:acrss09114@gmail.com" class="contact-channel-item">
+              <div class="channel-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div class="channel-text">
+                <span class="channel-label mono-tag">EMAIL</span>
+                <span class="channel-val">acrss09114@gmail.com</span>
+              </div>
+            </a>
+
+            <a href="tel:+917025767548" class="contact-channel-item">
+              <div class="channel-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div class="channel-text">
+                <span class="channel-label mono-tag">PHONE</span>
+                <span class="channel-val">+91 7025767548</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="contact-actions">
+            <a href="mailto:acrss09114@gmail.com" class="btn btn-primary magnetic-btn">
+              <span>Email Me</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="https://github.com/Abhicodes001" target="_blank" rel="noopener noreferrer" class="btn btn-secondary magnetic-btn">
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/abhishek-m-nair-8254372b1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary magnetic-btn">
+              <span>LinkedIn</span>
+            </a>
+            <a href="/Abhishek_M_Nair_Resume.pdf" target="_blank" download="Abhishek_M_Nair_Resume.pdf" class="btn btn-ghost magnetic-btn">
+              <span>Resume PDF</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- 11 FOOTER                                                    -->
+  <!-- ============================================================ -->
+  <footer class="main-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo">ABHISHEK M NAIR</span>
+          <span class="footer-title mono-tag">AI/ML & FULL-STACK DEVELOPER</span>
+          <span class="footer-location mono-meta">Thrissur, Kerala, India</span>
+        </div>
+
+        <div class="footer-nav">
+          <a href="https://github.com/Abhicodes001" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/abhishek-m-nair-8254372b1" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:acrss09114@gmail.com">Email</a>
+          <a href="/Abhishek_M_Nair_Resume.pdf" target="_blank" download>Resume</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; <span id="current-year">2026</span> Abhishek M Nair. All rights reserved.
+        </p>
+        <p class="footer-witty mono-tag">
+          "Built with code, curiosity and a lot of debugging."
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================ -->
+  <!-- INTERACTIVE PROJECT DETAILS MODAL                            -->
+  <!-- ============================================================ -->
+  <div id="project-modal" class="project-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-window">
+      <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close Project Details Modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+
+      <div class="modal-body" id="modal-body-content">
+        <!-- Dynamic content injected by main.js -->
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

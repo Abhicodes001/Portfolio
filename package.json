@@ -1,0 +1,17 @@
+{
+  "name": "abhishek-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lenis": "^1.1.18"
+  },
+  "devDependencies": {
+    "vite": "^5.4.10"
+  }
+}
