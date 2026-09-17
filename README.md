@@ -11,7 +11,7 @@ A personal developer portfolio engineered to communicate technical depth, archit
 
 ---
 
-## 🚀 Key Highlights & Projects
+##  Key Highlights & Projects
 
 - **FinFlow — Forensic Bank Statement Analysis System**  
   *CideCode Karnataka Police Tech Hackathon 2026 Finalist (Team Delta Force)*  
@@ -26,7 +26,7 @@ A personal developer portfolio engineered to communicate technical depth, archit
 
 - **AI Audio-to-Sign Language Converter**  
   Real-time assistive NLP and computer vision system converting spoken English to animated sign language with out-of-vocabulary finger-spelling fallback.  
-  👉 **[Live Demo](https://audio-to-sign-lang.onrender.com/)**
+   **[Live Demo](https://audio-to-sign-lang.onrender.com/)**
 
 - **SkillVoice — Voice-First AI Upskilling Platform**  
   *DeCoDe 12-Hour Hackathon Build*  
@@ -34,7 +34,7 @@ A personal developer portfolio engineered to communicate technical depth, archit
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Frontend & Interface**: React.js, TypeScript, Vite, HTML5, Vanilla CSS, Lenis Smooth Scroll
 - **Backend & APIs**: FastAPI, Flask, Node.js, REST APIs, Celery, Redis
