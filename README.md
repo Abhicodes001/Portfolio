@@ -45,7 +45,7 @@ A personal developer portfolio engineered to communicate technical depth, archit
 
 ---
 
-## 🏃 Local Development
+##  Local Development
 
 1. **Clone the repository**:
    ```bash
