@@ -71,7 +71,7 @@ A personal developer portfolio engineered to communicate technical depth, archit
 
 ---
 
-## 📬 Contact & Socials
+##  Contact & Socials
 
 - **Email**: [acrss09114@gmail.com](mailto:acrss09114@gmail.com)
 - **Phone**: +91 7025767548
