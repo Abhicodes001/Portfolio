@@ -2538,12 +2538,35 @@ button {
   .experiments-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .showcase-card {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 22px 20px;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
 }
 
 /* Tablet (<= 768px) */
 @media (max-width: 768px) {
   .nav-links, .nav-actions .btn {
     display: none;
+  }
+
+  .nav-actions .nav-icon-link {
+    display: none;
+  }
+
+  .theme-toggle-btn .theme-toggle-text {
+    display: none;
+  }
+
+  .theme-toggle-btn {
+    padding: 7px 10px;
   }
 
   .menu-toggle {
@@ -2555,11 +2578,21 @@ button {
   }
 
   .hero-title {
-    font-size: 2.5rem;
+    font-size: clamp(2.4rem, 8vw, 3.4rem);
   }
 
   .hero-subtitle .tagline {
     font-size: 1.1rem;
+  }
+
+  .showcase-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 20px 16px;
+  }
+
+  .visual-terminal {
+    height: 230px;
   }
 
   .sub-project-card {
@@ -2581,9 +2614,9 @@ button {
     grid-template-columns: 1fr;
   }
 
-  .footer-top {
-    flex-direction: column;
-    gap: 24px;
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   .footer-bottom {
@@ -2591,10 +2624,94 @@ button {
     gap: 12px;
     text-align: center;
   }
+
+  .footer-giant-shadow {
+    font-size: clamp(2rem, 9vw, 4.2rem);
+    letter-spacing: 0.04em;
+    margin-bottom: 0;
+  }
 }
 
 /* Mobile (<= 480px) */
 @media (max-width: 480px) {
+  .nav-container {
+    padding: 0 16px;
+  }
+
+  .logo-text {
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+  }
+
+  .profile-portal-wrapper {
+    max-width: 280px;
+    height: 340px;
+  }
+
+  .portal-base-card {
+    height: 250px;
+  }
+
+  .profile-cutout-img {
+    max-height: 360px;
+  }
+
+  .showcase-card {
+    padding: 16px 12px;
+    border-radius: var(--radius-md);
+  }
+
+  .visual-terminal {
+    height: 205px;
+  }
+
+  .rag-pipeline-container {
+    padding: 20px 6px 0;
+    gap: 14px;
+  }
+
+  .rag-boxes-row {
+    gap: 4px;
+  }
+
+  .rag-box {
+    padding: 6px 8px;
+    font-size: 0.6rem;
+  }
+
+  .rag-dash-line {
+    width: 6px;
+  }
+
+  .solar-meter-box {
+    padding: 8px 8px;
+  }
+
+  .solar-gauge-bar {
+    width: 42px;
+  }
+
+  .solar-nodes-row {
+    gap: 6px;
+  }
+
+  .term-cat {
+    font-size: 0.58rem;
+  }
+
+  .showcase-actions {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .showcase-title {
+    font-size: 1.35rem;
+  }
+
+  .showcase-subtitle {
+    font-size: 0.9rem;
+  }
+
   .profile-strip {
     grid-template-columns: 1fr;
   }
@@ -2630,6 +2747,11 @@ button {
 
   .modal-body {
     padding: 24px 16px;
+  }
+
+  .footer-giant-shadow {
+    font-size: clamp(1.4rem, 7.5vw, 2.5rem);
+    letter-spacing: 0.02em;
   }
 }
 
