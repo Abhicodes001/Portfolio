@@ -3614,6 +3614,19 @@ button {
 }
 
 /* Hero Section */
+[data-theme="light"] .hero-status-pill {
+  background: #FFFFFF;
+  border: 2px solid #050505;
+  box-shadow: 2px 2px 0px #050505;
+}
+[data-theme="light"] .hero-status-pill .status-dot {
+  background-color: #F04416;
+  box-shadow: 0 0 6px #F04416;
+}
+[data-theme="light"] .hero-status-pill .status-text {
+  color: #050505;
+  font-weight: 700;
+}
 [data-theme="light"] .hero-badge {
   background: #FFFFFF;
   border: 2px solid #050505;
@@ -3628,20 +3641,20 @@ button {
   color: #050505;
   font-weight: 900;
 }
-[data-theme="light"] .hero-title .title-accent {
-  background: none;
-  -webkit-text-fill-color: #F04416;
-  color: #F04416;
-  text-decoration: underline;
-  text-decoration-thickness: 4px;
-  text-underline-offset: 6px;
-  text-decoration-color: #050505;
+[data-theme="light"] .title-first {
+  color: #050505;
+}
+[data-theme="light"] .title-last {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: #050505 !important;
+  color: #050505 !important;
 }
 [data-theme="light"] .hero-subtitle .tagline {
   color: #050505;
   font-weight: 800;
 }
-[data-theme="light"] .hero-subtitle .sub-desc {
+[data-theme="light"] .hero-desc {
   color: #1F1F1F;
 }
 [data-theme="light"] .hero-meta {
@@ -4085,6 +4098,86 @@ button {
 [data-theme="light"] .lead-desc {
   color: #1F1F1F;
 }
+
+/* Leadership & NCC Cards (Editorial Brutalist) */
+[data-theme="light"] .ncc-summary-card,
+[data-theme="light"] .ncc-progression-card {
+  background: #FFFFFF;
+  border: 2.5px solid #050505;
+  border-radius: 8px;
+  box-shadow: 5px 5px 0px #050505;
+}
+[data-theme="light"] .ncc-summary-card:hover,
+[data-theme="light"] .ncc-progression-card:hover {
+  border-color: #050505;
+  box-shadow: 7px 7px 0px #F04416;
+}
+[data-theme="light"] .ncc-title {
+  color: #050505;
+  font-weight: 800;
+}
+[data-theme="light"] .ncc-highlight-box {
+  background: #F5F5F0;
+  border: 2px solid #050505;
+  border-left: 5px solid #F04416;
+  box-shadow: 2.5px 2.5px 0px #050505;
+}
+[data-theme="light"] .highlight-title {
+  color: #F04416;
+  font-weight: 800;
+}
+[data-theme="light"] .highlight-quote {
+  color: #050505 !important;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.6;
+}
+[data-theme="light"] .pillar-item {
+  background: #F5F5F0;
+  border: 1.5px solid #050505;
+}
+[data-theme="light"] .pillar-label {
+  color: #F04416;
+  font-weight: 800;
+}
+[data-theme="light"] .pillar-desc {
+  color: #1F1F1F;
+}
+[data-theme="light"] .progression-title {
+  color: #050505;
+  font-weight: 800;
+}
+[data-theme="light"] .ncc-timeline-steps::before {
+  background: #050505;
+  width: 2.5px;
+}
+[data-theme="light"] .ncc-step::before {
+  background: #FFFFFF;
+  border: 2px solid #050505;
+}
+[data-theme="light"] .ncc-step.highlight::before {
+  background: #F04416;
+  border-color: #050505;
+  box-shadow: 0 0 0 3px #F5F5F0;
+}
+[data-theme="light"] .ncc-step h4 {
+  color: #050505;
+  font-weight: 800;
+}
+[data-theme="light"] .ncc-step p {
+  color: #1F1F1F;
+}
+[data-theme="light"] .about-lead {
+  color: #050505 !important;
+  font-weight: 700;
+}
+[data-theme="light"] .about-body {
+  color: #1F1F1F;
+}
+[data-theme="light"] .modal-feature-item {
+  color: #050505;
+}
+
 
 /* Contact Section & Editorial Dark Footer */
 [data-theme="light"] .contact-section {
