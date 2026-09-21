@@ -186,13 +186,15 @@ if (canvas && !isReducedMotion) {
 
     ctx.clearRect(0, 0, width, height);
 
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+
     // Fine grid drawing with subtle shift
     const gridSize = 70;
     const shiftX = (mouseX - width / 2) * 0.015;
     const shiftY = (mouseY - height / 2) * 0.015;
 
     ctx.beginPath();
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.018)';
+    ctx.strokeStyle = isLight ? 'rgba(5, 5, 5, 0.035)' : 'rgba(255, 255, 255, 0.018)';
     ctx.lineWidth = 1;
 
     for (let x = (shiftX % gridSize); x < width; x += gridSize) {
@@ -219,7 +221,7 @@ if (canvas && !isReducedMotion) {
       // Draw particle
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(148, 163, 184, ${p.alpha})`;
+      ctx.fillStyle = isLight ? `rgba(21, 21, 21, ${p.alpha * 0.45})` : `rgba(148, 163, 184, ${p.alpha})`;
       ctx.fill();
 
       // Connect near neighbors
@@ -233,7 +235,9 @@ if (canvas && !isReducedMotion) {
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(p2.x, p2.y);
-          ctx.strokeStyle = `rgba(99, 102, 241, ${0.12 * (1 - dist / 110)})`;
+          ctx.strokeStyle = isLight 
+            ? `rgba(240, 68, 22, ${0.16 * (1 - dist / 110)})`
+            : `rgba(99, 102, 241, ${0.12 * (1 - dist / 110)})`;
           ctx.lineWidth = 0.6;
           ctx.stroke();
         }
@@ -648,4 +652,59 @@ if (stackLayers.length > 0) {
 const currentYearEl = document.getElementById('current-year');
 if (currentYearEl) {
   currentYearEl.textContent = new Date().getFullYear();
+}
+
+/* ============================================================ */
+/* 12 THEME SWITCHER (DAYLIGHT / DARK MODE)                     */
+/* ============================================================ */
+const themeToggleBtn = document.getElementById('theme-toggle');
+const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
+
+function updateThemeUI(theme) {
+  const isLight = theme === 'light';
+  if (isLight) {
+    document.documentElement.setAttribute('data-theme', 'light');
+    if (themeToggleBtn) {
+      themeToggleBtn.setAttribute('aria-label', 'Switch to Dark Mode');
+      themeToggleBtn.setAttribute('title', 'Switch to Dark Mode');
+      const label = themeToggleBtn.querySelector('.theme-toggle-text');
+      if (label) label.textContent = 'DARK';
+    }
+    if (mobileThemeToggleBtn) {
+      const mobileLabel = mobileThemeToggleBtn.querySelector('.mobile-theme-text');
+      if (mobileLabel) mobileLabel.textContent = '🌙 Switch to Dark Mode';
+    }
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+    if (themeToggleBtn) {
+      themeToggleBtn.setAttribute('aria-label', 'Switch to Daylight Mode');
+      themeToggleBtn.setAttribute('title', 'Switch to Daylight Mode');
+      const label = themeToggleBtn.querySelector('.theme-toggle-text');
+      if (label) label.textContent = 'DAYLIGHT';
+    }
+    if (mobileThemeToggleBtn) {
+      const mobileLabel = mobileThemeToggleBtn.querySelector('.mobile-theme-text');
+      if (mobileLabel) mobileLabel.textContent = '☀️ Switch to Daylight Mode';
+    }
+  }
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const nextTheme = current === 'light' ? 'dark' : 'light';
+  try {
+    localStorage.setItem('theme-mode', nextTheme);
+  } catch (e) {}
+  updateThemeUI(nextTheme);
+}
+
+if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+if (mobileThemeToggleBtn) mobileThemeToggleBtn.addEventListener('click', toggleTheme);
+
+// Initialize UI on load
+try {
+  const initialTheme = localStorage.getItem('theme-mode') || 'dark';
+  updateThemeUI(initialTheme);
+} catch (e) {
+  updateThemeUI('dark');
 }
