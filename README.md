@@ -43,7 +43,7 @@ A personal developer portfolio engineered to communicate technical depth, archit
 - **Databases & Graph**: PostgreSQL, Neo4j, Supabase, SQL
 - **DevOps & Tools**: Docker, Git, GitHub, VS Code, Linux CLI
 
----
+
 
 ##  Local Development
 
