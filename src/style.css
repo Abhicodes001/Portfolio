@@ -4266,8 +4266,13 @@ button {
   box-shadow: 2.5px 2.5px 0px #050505;
 }
 [data-theme="light"] .highlight-title {
-  color: #F04416;
+  color: #F04416 !important;
+  background: transparent !important;
+  padding: 0 !important;
   font-weight: 800;
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 6px;
 }
 [data-theme="light"] .highlight-quote {
   color: #050505 !important;
@@ -4280,15 +4285,36 @@ button {
   border: 1.5px solid #050505;
 }
 [data-theme="light"] .pillar-label {
-  color: #F04416;
+  color: #F04416 !important;
+  background: transparent !important;
+  padding: 0 !important;
   font-weight: 800;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 4px;
 }
 [data-theme="light"] .pillar-desc {
   color: #1F1F1F;
 }
 [data-theme="light"] .progression-title {
-  color: #050505;
+  color: #5A5A54 !important;
+  background: transparent !important;
+  padding: 0 !important;
   font-weight: 800;
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 22px;
+}
+[data-theme="light"] .step-num {
+  display: inline-block !important;
+  width: fit-content !important;
+  background: #F04416 !important;
+  color: #FFFFFF !important;
+  padding: 2px 8px !important;
+  border-radius: 3px;
+  font-weight: 800;
+  font-size: 0.72rem;
+  margin-bottom: 6px;
 }
 [data-theme="light"] .ncc-timeline-steps::before {
   background: #050505;
