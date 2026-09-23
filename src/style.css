@@ -3921,16 +3921,23 @@ button {
   transform: translateY(-3px);
 }
 [data-theme="light"] .showcase-step-num {
-  background: #F04416;
-  color: #FFFFFF;
+  background: #F04416 !important;
+  color: #FFFFFF !important;
   font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 3px;
 }
 [data-theme="light"] .showcase-dash {
-  color: #050505;
+  color: #5A5A54;
 }
 [data-theme="light"] .showcase-cat-label {
-  color: #050505;
+  background: transparent !important;
+  color: #5A5A54 !important;
   font-weight: 700;
+  padding: 0 !important;
+  border: none !important;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
 }
 [data-theme="light"] .showcase-title {
   color: #050505;
