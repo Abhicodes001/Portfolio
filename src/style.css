@@ -3806,13 +3806,13 @@ button {
   background: linear-gradient(to top, #FFFFFF 0%, transparent 100%);
 }
 
-/* Hero Core Stack Sideways Marquee — Black Graphic Panel */
+/* Hero Core Stack Sideways Marquee — Light Theme */
 [data-theme="light"] .hero-core-stack {
-  background: #050505;
-  border-top: 3px solid #050505;
-  border-bottom: 3px solid #050505;
-  color: #F5F5F0;
-  box-shadow: 0 4px 0px rgba(5, 5, 5, 0.1);
+  background: transparent;
+  border-top: none;
+  border-bottom: none;
+  color: #050505;
+  box-shadow: none;
 }
 [data-theme="light"] .core-stack-label {
   color: #F04416;
@@ -3820,24 +3820,38 @@ button {
   letter-spacing: 0.14em;
 }
 [data-theme="light"] .core-stack-line {
-  background: rgba(255, 255, 255, 0.25);
+  background: linear-gradient(90deg, rgba(5, 5, 5, 0.25) 0%, rgba(5, 5, 5, 0.08) 75%, transparent 100%);
 }
-[data-theme="light"] .core-stack-item {
-  color: #F5F5F0;
+[data-theme="light"] .stack-pill {
+  background: #FFFFFF;
+  border: 1.5px solid #050505;
+  color: #050505;
   font-weight: 600;
+  box-shadow: 2px 2px 0px #050505;
 }
-[data-theme="light"] .core-stack-item:hover {
+[data-theme="light"] .stack-pill:hover {
+  background: #050505;
+  color: #FFFFFF;
+  border-color: #050505;
+  box-shadow: 3px 3px 0px #F04416;
+  transform: translateY(-2px);
+}
+[data-theme="light"] .core-stack-marquee::before,
+[data-theme="light"] .core-stack-marquee::after {
+  display: none !important;
+}
+[data-theme="light"] .scroll-down-indicator .scroll-text {
+  color: #050505;
+  background: transparent !important;
+  padding: 0 !important;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+[data-theme="light"] .scroll-down-indicator .scroll-arrow {
   color: #F04416;
 }
-[data-theme="light"] .core-stack-dot {
-  background: #F04416;
-  box-shadow: 0 0 6px #F04416;
-}
-[data-theme="light"] .core-stack-marquee::before {
-  background: linear-gradient(to right, #050505 0%, transparent 100%);
-}
-[data-theme="light"] .core-stack-marquee::after {
-  background: linear-gradient(to left, #050505 0%, transparent 100%);
+[data-theme="light"] .scroll-down-indicator:hover .scroll-text {
+  color: #F04416;
 }
 
 /* About Section */
