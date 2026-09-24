@@ -9,7 +9,7 @@
 
 A personal developer portfolio engineered to communicate technical depth, architectural mastery, hackathon achievements, leadership, and product craftsmanship.
 
----
+
 
 ##  Key Highlights & Projects
 
