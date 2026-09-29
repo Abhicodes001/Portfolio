@@ -256,31 +256,75 @@ const cursorDot = document.getElementById('cursor-dot');
 const cursorRing = document.getElementById('cursor-ring');
 
 if (cursorDot && cursorRing && window.matchMedia('(pointer: fine)').matches && !isReducedMotion) {
+  document.documentElement.classList.add('has-custom-cursor');
+
   let mouseX = -100;
   let mouseY = -100;
   let ringX = -100;
   let ringY = -100;
+  let isVisible = false;
+  let isClicking = false;
+
+  const showCursor = () => {
+    if (!isVisible) {
+      isVisible = true;
+      cursorDot.style.opacity = '1';
+      cursorRing.style.opacity = '1';
+    }
+  };
+
+  const hideCursor = () => {
+    isVisible = false;
+    cursorDot.style.opacity = '0';
+    cursorRing.style.opacity = '0';
+    cursorRing.classList.remove('hovering');
+  };
 
   window.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-    cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+    if (!isVisible) {
+      ringX = mouseX;
+      ringY = mouseY;
+      showCursor();
+    }
+    cursorDot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+  }, { passive: true });
+
+  document.addEventListener('mouseenter', () => {
+    showCursor();
+  });
+
+  document.addEventListener('mouseleave', () => {
+    hideCursor();
+  });
+
+  window.addEventListener('mousedown', () => {
+    isClicking = true;
+  }, { passive: true });
+
+  window.addEventListener('mouseup', () => {
+    isClicking = false;
   }, { passive: true });
 
   function updateCursorRing() {
     ringX += (mouseX - ringX) * 0.18;
     ringY += (mouseY - ringY) * 0.18;
-    cursorRing.style.transform = `translate(${ringX}px, ${ringY}px)`;
+    const scale = isClicking ? ' scale(0.85)' : '';
+    cursorRing.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%)${scale}`;
     requestAnimationFrame(updateCursorRing);
   }
   requestAnimationFrame(updateCursorRing);
 
-  // Hover state detection
-  const interactables = document.querySelectorAll('a, button, .project-card, .tech-chip, .experiment-card, .hackathon-card');
-  interactables.forEach((el) => {
-    el.addEventListener('mouseenter', () => cursorRing.classList.add('hovering'));
-    el.addEventListener('mouseleave', () => cursorRing.classList.remove('hovering'));
-  });
+  // Dynamic hover state detection for interactive elements (including dynamically rendered elements)
+  document.addEventListener('mouseover', (e) => {
+    const target = e.target;
+    if (target && target.closest('a, button, [role="button"], input, textarea, select, .project-card, .tech-chip, .experiment-card, .hackathon-card, .magnetic-btn, .clickable, .tab-btn, .filter-chip, .modal-close-btn, .nav-icon-link')) {
+      cursorRing.classList.add('hovering');
+    } else {
+      cursorRing.classList.remove('hovering');
+    }
+  }, { passive: true });
 }
 
 /* ============================================================ */

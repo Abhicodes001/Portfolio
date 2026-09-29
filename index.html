@@ -32,6 +32,9 @@
           document.documentElement.setAttribute('data-theme', 'light');
         }
       } catch (e) { }
+      if (window.matchMedia && window.matchMedia('(pointer: fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('has-custom-cursor');
+      }
     })();
   </script>
 </head>

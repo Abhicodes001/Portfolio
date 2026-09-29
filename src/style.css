@@ -235,8 +235,19 @@ button {
 }
 
 /* ============================================================ */
-/* CUSTOM CURSOR (DESKTOP)                                      */
+/* CUSTOM CURSOR & HIDE NATIVE WINDOWS CURSOR                   */
 /* ============================================================ */
+@media (pointer: fine) {
+  /* Completely hide Windows / OS cursor when moving over website */
+  html.has-custom-cursor,
+  html.has-custom-cursor body,
+  html.has-custom-cursor *,
+  html.has-custom-cursor *::before,
+  html.has-custom-cursor *::after {
+    cursor: none !important;
+  }
+}
+
 .cursor-dot {
   position: fixed;
   top: 0;
@@ -246,9 +257,10 @@ button {
   background-color: #ffffff;
   border-radius: 50%;
   pointer-events: none;
-  z-index: 9990;
+  z-index: 99999;
+  opacity: 0;
   transform: translate(-50%, -50%);
-  transition: opacity 0.2s, transform 0.08s ease-out;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
 }
 
 .cursor-ring {
@@ -257,19 +269,20 @@ button {
   left: 0;
   width: 32px;
   height: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
   border-radius: 50%;
   pointer-events: none;
-  z-index: 9989;
+  z-index: 99998;
+  opacity: 0;
   transform: translate(-50%, -50%);
-  transition: width 0.2s var(--ease-out), height 0.2s var(--ease-out), border-color 0.2s var(--ease-out), background-color 0.2s var(--ease-out);
+  transition: width 0.22s var(--ease-out), height 0.22s var(--ease-out), border-color 0.22s var(--ease-out), background-color 0.22s var(--ease-out), opacity 0.2s ease;
 }
 
 .cursor-ring.hovering {
   width: 48px;
   height: 48px;
   border-color: var(--accent-cyan);
-  background-color: rgba(56, 189, 248, 0.08);
+  background-color: rgba(56, 189, 248, 0.12);
 }
 
 @media (pointer: coarse) {
