@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8" />
@@ -27,11 +27,17 @@
   <script>
     (function () {
       try {
-        const theme = localStorage.getItem('theme-mode');
-        if (theme === 'light') {
+        const urlParams = new URLSearchParams(window.location.search);
+        const paramTheme = urlParams.get('theme');
+        const theme = (paramTheme === 'dark') ? 'dark' : (paramTheme === 'light' || paramTheme === 'daylight') ? 'light' : localStorage.getItem('theme-mode');
+        if (theme === 'dark') {
+          document.documentElement.removeAttribute('data-theme');
+        } else {
           document.documentElement.setAttribute('data-theme', 'light');
         }
-      } catch (e) { }
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
       if (window.matchMedia && window.matchMedia('(pointer: fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         document.documentElement.classList.add('has-custom-cursor');
       }
@@ -105,8 +111,8 @@
         </a>
 
         <!-- Daylight / Dark Mode Toggle Button -->
-        <button id="theme-toggle" class="theme-toggle-btn magnetic-btn" aria-label="Toggle Daylight Mode"
-          title="Toggle Daylight / Dark Mode">
+        <button id="theme-toggle" class="theme-toggle-btn magnetic-btn" aria-label="Switch to Dark Mode"
+          title="Switch to Dark Mode">
           <span class="theme-icon sun-icon" aria-hidden="true">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
               stroke-linecap="round" stroke-linejoin="round">
@@ -127,7 +133,7 @@
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
             </svg>
           </span>
-          <span class="theme-toggle-text">DAYLIGHT</span>
+          <span class="theme-toggle-text">DARK</span>
         </button>
 
         <!-- Mobile Menu Toggle Button -->
@@ -154,8 +160,8 @@
         </ul>
         <div class="mobile-actions">
           <button id="mobile-theme-toggle" class="btn btn-outline w-full mb-3 theme-toggle-btn"
-            aria-label="Toggle Daylight Mode">
-            <span class="mobile-theme-text">☀️ Switch to Daylight Mode</span>
+            aria-label="Switch to Dark Mode">
+            <span class="mobile-theme-text">🌙 Switch to Dark Mode</span>
           </button>
           <a href="/Abhishek_M_Nair_Resume.pdf" target="_blank" download="Abhishek_M_Nair_Resume.pdf"
             class="btn btn-primary w-full">

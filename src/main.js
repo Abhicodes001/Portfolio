@@ -754,8 +754,11 @@ if (mobileThemeToggleBtn) mobileThemeToggleBtn.addEventListener('click', toggleT
 
 // Initialize UI on load
 try {
-  const initialTheme = localStorage.getItem('theme-mode') || 'dark';
+  const urlParams = new URLSearchParams(window.location.search);
+  const paramTheme = urlParams.get('theme');
+  const validParamTheme = (paramTheme === 'light' || paramTheme === 'daylight') ? 'light' : (paramTheme === 'dark' ? 'dark' : null);
+  const initialTheme = validParamTheme || localStorage.getItem('theme-mode') || 'light';
   updateThemeUI(initialTheme);
 } catch (e) {
-  updateThemeUI('dark');
+  updateThemeUI('light');
 }
