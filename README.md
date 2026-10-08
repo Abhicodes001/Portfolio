@@ -41,7 +41,7 @@ A personal developer portfolio engineered to communicate technical depth, archit
 - **AI / Machine Learning**: TensorFlow, PyTorch, Scikit-learn, NLP, Computer Vision, Time-Series
 - **Generative AI & RAG**: LangChain, FAISS, Vector Search, OpenAI API, Gemini API, Groq API, OpenRouter
 - **Databases & Graph**: PostgreSQL, Neo4j, Supabase, SQL
-- **DevOps & Tools**: Docker, Git, GitHub, VS Code, Linux CLI
+- **DevOps & Tools**: Docker, Git, GitHub, VS Code, 
 
 
 
