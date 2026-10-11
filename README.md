@@ -1,7 +1,7 @@
 # Abhishek M Nair — Developer Portfolio
 
 > **AI/ML & Full-Stack Developer** • Thrissur, Kerala, India  
-> Building intelligent systems. Engineering useful products.
+> Building intelligent systems and useful products.
 
 [![Portfolio Live](https://img.shields.io/badge/Status-Active-emerald?style=flat-square)](#)
 [![Tech Stack](https://img.shields.io/badge/Stack-Vite%20%7C%20FastAPI%20%7C%20React%20%7C%20LangChain-6366f1?style=flat-square)](#)
